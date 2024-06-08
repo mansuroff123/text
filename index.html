@@ -1,30 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="bootstrap.css" />
-  </head>
-  <body>
-    <div class="border border-3 border-danger rounded-5 m-5 p-5">
-        <h1 class="text-center">Title</h1>
-        <p class="text-capitalize ">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas atque vitae
-        nihil facilis reiciendis perspiciatis incidunt maxime, dolorum, placeat,
-        libero illum vero. Illo itaque dicta quo perspiciatis, illum dolorem
-        aliquam maiores suscipit consequuntur, ratione beatae rerum molestiae cum
-        incidunt labore, delectus nostrum enim hic iste! Aperiam enim molestiae
-        hic deserunt magni fuga illo, qui ad quae, molestias saepe ex unde soluta
-        nesciunt non minus explicabo, distinctio velit laborum placeat nihil.
-        Distinctio at tenetur aperiam quaerat eligendi tempore aspernatur ipsa
-        veritatis repellat nostrum voluptas quasi animi voluptate, excepturi velit
-        corrupti rerum minima esse, blanditiis eos pariatur, molestiae accusamus!
-        Commodi, enim magnam.
-        </p>
-        <a href="#" class="text-decoration-none text-dark">apple.com</a>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap forms</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Laptop Service</h1>
+    <form>
+      <div class="row">
+        <!-- Birinchi col-6 -->
+        <div class="col-6">
+          <label for="fname" class="form-label">First name</label>
+          <input type="text" name="fname" id="fname" class="form-control" placeholder="Your name">
+          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <label for="date" class="form-label">Date</label>
+          <input type="date" name="date" id="date" class="form-control">
+          <label>Choose your gender:</label>
+          <div class="gender ms-3">
+            <div class="form-check">
+              <input class="form-check-input" value="male" type="radio" name="gender" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" value="female" type="radio" name="gender" id="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2">
+                Female
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" value="none" type="radio" name="gender" id="flexRadioDefault3">
+              <label class="form-check-label" for="flexRadioDefault3">
+                Not specified
+              </label>
+            </div>
+          </div>
+          <label for="customRange2" class="form-label">Price</label>
+          <input type="range" class="form-range" min="0" max="5" id="customRange2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="laptop" value="new" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              New
+            </label>
+          </div>
+          <label for="ctr">Choose your country</label>
+          <select name="country" id="ctr" class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="cad">Canada</option>
+            <option value="uzb">Uzbekistan</option>
+            <option value="usa">America</option>
+          </select>
 
-    <script src="bootstrap.bundle.js"></script>
-  </body>
+        </div>
+        <!-- Ikkinchi col-6 -->
+        <div class="col-6">
+          <label for="lname" class="form-label">Last name</label>
+          <input type="text" name="lname" id="lname" class="form-control" placeholder="Your last name">
+          <label for="inputPassword5" class="form-label">Password</label>
+          <input placeholder="Must be 8-20 characters long." name="pswd" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+          <label for="formFile" class="form-label">Select laptop images</label>
+          <input class="form-control" type="file" id="formFile">
+          <label for="exampleColorInput" class="form-label">Laptop color</label>
+          <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#000" title="Choose your color">
+          <label for="tel" class="form-label">Phone number</label>
+          <input type="tel" name="tel" id="tel" class="form-control" placeholder="Write your phone number">
+          <label for="exampleFormControlTextarea1" class="form-label">Feedback</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write your feedback"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+  </div>
+
+  <script src="bootstrap.bundle.js"></script>
+</body>
 </html>
